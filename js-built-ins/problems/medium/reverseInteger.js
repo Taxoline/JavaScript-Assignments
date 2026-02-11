@@ -22,7 +22,7 @@
 */
 
 function reverseInteger(num) {
-  // Your code here
+  lalalal
 }
 
 module.exports = reverseInteger;
