@@ -26,7 +26,27 @@
 */
 
 function isPerfectNumber(num) {
-  // Your code here
+  if (num <= 1) return false;
+
+  let summ = 0;
+
+  for (let i = 1; i * i <= num; i++) {
+
+    if (num % i === 0) {
+
+      if (i !== num) {
+        summ += i;
+      }
+
+      let other = num / i;
+
+      if (other !== i && other !== num) {
+        summ += other;
+      }
+    }
+  }
+
+  return summ === num;
 }
 
 module.exports = { isPerfectNumber };

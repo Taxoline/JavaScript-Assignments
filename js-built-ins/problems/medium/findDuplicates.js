@@ -24,4 +24,3 @@ function findDuplicates(arr) {
 }
 
 module.exports = findDuplicates;
-
