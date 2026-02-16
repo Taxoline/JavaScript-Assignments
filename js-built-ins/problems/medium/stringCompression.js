@@ -20,8 +20,24 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-compressString`
 */
-function compression(str) {
-  // Your code here
+
+function compression(s){
+  let n=s.length;
+  let cnt=0;
+  let ans="";
+
+  for(let i=0; i<n; i++){
+    cnt++;
+    if(s[i]!==s[i+1]){
+      ans+=s[i];
+      if(cnt>1){
+        ans+=cnt;
+      }
+      cnt=0;
+    }
+  }
+
+  return ans;
 }
 
 module.exports = compression;

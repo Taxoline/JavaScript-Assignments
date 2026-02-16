@@ -22,7 +22,20 @@
 */
 
 function reverseInteger(num) {
-  lalalal
+  
+  let s = String(num);
+  let sign=1;
+  if(s[0]=='-'){
+    sign=-1;
+    s=s.slice(1);
+  }
+  let ns=s.split("").reverse().join("");
+
+  let ans=Number(ns);
+  ans*=sign;
+
+  return ans;
+  
 }
 
 module.exports = reverseInteger;

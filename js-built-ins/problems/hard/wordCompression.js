@@ -23,7 +23,22 @@
 
 
 function compressWords(arr) {
-  // Your code here
+  let n=arr.length;
+  let narr=[];
+  let cnt=0;
+  for(let i=0; i<n; i++){
+    cnt++;
+    if(arr[i]!==arr[i+1]){
+      if(cnt>1){
+        narr.push(arr[i]+cnt);
+      }
+      else{
+        narr.push(arr[i]);
+      }
+      cnt=0;
+    }
+  }
+  return narr;
 }
 
 
