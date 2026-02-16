@@ -21,6 +21,22 @@
   - `npm run test-nonrepeat`
 */
 function nonrepeat(str) {
-  // Your code here
+  let freq={};
+  let ans="";
+  for(let s of str){
+    freq[s]=(freq[s]||0)+1;
+  }
+
+  for(let s of str){
+    if(freq[s]==1){
+      ans+=s;
+      break;
+    }
+  }
+  if(ans==""){
+    return null;
+  }
+  return ans;
+
 }
 module.exports = nonrepeat;
