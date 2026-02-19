@@ -19,7 +19,19 @@
 */
 
 function getUniqueElements(arr) {
-  // Your code here
+  let seen=new Set();
+  let narr=[];
+
+  for(let num of arr){
+
+    
+    if(!seen.has(num)){
+      narr.push(num);
+      seen.add(num);
+    }
+    
+  }
+  return narr;
 }
 
 module.exports = getUniqueElements;
